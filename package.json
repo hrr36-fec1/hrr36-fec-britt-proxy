@@ -1,0 +1,15 @@
+{
+  "name": "hrr36-fec1-britt-proxy",
+  "version": "",
+  "description": "",
+  "author": "Britt Zanetis",
+  "license": "ISC",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+  }
+}
