@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, '../')));
 
 
 app.use(
-  '/api/movies/details/jurassic-park', proxy({
+  '/api/movies/details/jurassic-park', cors(), proxy({
     target: 'http://127.0.0.1:3002',
     changeOrigin: true
   })
