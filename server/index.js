@@ -17,7 +17,8 @@ app.use(function(req, res, next) { 
   //intercepts OPTIONS method 
   if ('OPTIONS' === req.method){ 
     res.sendStatus(200); 
-  } else{ 
+  } 
+  else { 
     next(); 
   } 
 }); 
@@ -40,7 +41,7 @@ app.use(
 
 app.use(
   '/api/movies/banner', cors(), proxy({
-    target: 'http://127.0.0.1:8080',
+    target: 'http://127.0.0.1:8082',
     changeOrigin: true
   })
 );
