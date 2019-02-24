@@ -48,7 +48,7 @@ app.use(
 
 app.use(
   '/api/movies/*/reviews', cors(), proxy({
-    target: 'http://tylerproxy-env.mugbndtn32.us-east-2.elasticbeanstalk.com/',
+    target: 'http://ec2-18-222-191-108.us-east-2.compute.amazonaws.com',
     changeOrigin: true
   })
 );
