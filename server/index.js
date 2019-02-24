@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const proxy = require('http-proxy-middleware');
-const port = process.env.PORT || 3005;
+const port = process.env.PORT || 8081;
 
 let app = express()
 
@@ -34,21 +34,21 @@ app.use(
 
 app.use(
   '/api/movies/*/trailers', cors(), proxy({
-    target: 'http://127.0.0.1:3333',
+    target: 'http://betcriticproxy.us-east-2.elasticbeanstalk.com/',
     changeOrigin: true
   })
 );
 
 app.use(
   '/api/movies/banner', cors(), proxy({
-    target: 'http://127.0.0.1:8082',
+    target: 'http://betacriticbanner4-env.ammdczbp2e.us-east-1.elasticbeanstalk.com/',
     changeOrigin: true
   })
 );
 
 app.use(
   '/api/movies/*/reviews', cors(), proxy({
-    target: 'http://127.0.0.1:4444',
+    target: 'http://tylerproxy-env.mugbndtn32.us-east-2.elasticbeanstalk.com/',
     changeOrigin: true
   })
 );
