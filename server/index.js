@@ -27,7 +27,7 @@ app.use(function(req, res, next) { 
 
 app.use(
   '/api/movies/details/jurassic-park', cors(), proxy({
-    target: 'http://127.0.0.1:3005',
+    target: 'http://127.0.0.1:3002',
     changeOrigin: true
   })
 );
