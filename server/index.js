@@ -27,7 +27,7 @@ app.use(function(req, res, next) { 
 
 app.use(
   '/api/movies/details/jurassic-park', cors(), proxy({
-    target: 'http://127.0.0.1:3002',
+    target: 'http://bzfecservice-env.hi3tgp7xvp.us-east-1.elasticbeanstalk.com/',
     changeOrigin: true
   })
 );
